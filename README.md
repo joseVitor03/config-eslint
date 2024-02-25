@@ -26,21 +26,27 @@ npm i eslint --save-dev
 ### Arquivo .eslintrc.json:
 ```
 {
-  "root": true,
   "env": {
-    "browser": false,
-    "node": true,
     "es2021": true,
-    "jest": true
+    "node": true
   },
   "extends": [
     "trybe-backend"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
   ],
   "rules": {
     "max-len": ["error", { "code": 80 }],
     "max-lines-per-function": ["error", { "max": 30 }],
     "indent": ["error", 2],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "no-use-before-define": "off"
   },
   "settings": {
     "import/resolver": {
@@ -48,7 +54,16 @@ npm i eslint --save-dev
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/interfaces/*.ts"], // Aplicar essas regras apenas aos arquivos na pasta "interfaces"
+      "rules": {
+        "no-unused-vars": "off"
+      }
+    }
+  ]
 }
+
 
 ```
