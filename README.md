@@ -23,6 +23,14 @@ npm i eslint --save-dev
 
 ##### Escolha o formato JSON, que será o formato do nosso arquivo de configuração.
 
+### instale essas dependencias:
+```
+npm install eslint-config-airbnb-typescript \
+            @typescript-eslint/eslint-plugin@^6.0.0 \
+            @typescript-eslint/parser@^6.0.0 \
+            --save-dev
+```
+
 ### Arquivo .eslintrc.json:
 ```
 {
