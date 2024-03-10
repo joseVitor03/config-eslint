@@ -23,18 +23,12 @@ npm i eslint --save-dev
 
 ##### Escolha o formato JSON, que será o formato do nosso arquivo de configuração.
 
-### instale essas dependencias:
-```
-npm install eslint-config-airbnb-typescript \
-            @typescript-eslint/eslint-plugin@^6.0.0 \
-            @typescript-eslint/parser@^6.0.0 \
-            --save-dev
-```
+### https://www.npmjs.com/package/eslint-config-airbnb-typescript e instale a config recomendada
 
 ### Arquivo .eslintrc.json:
 ```
 
- {
+{
   "root": true,
   "env": {
     "browser": false,
@@ -43,9 +37,7 @@ npm install eslint-config-airbnb-typescript \
     "jest": true
   },
   "extends": [
-    "plugin:@typescript-eslint/recommended",
     "airbnb-base",
-    "plugin:mocha/recommended",
     "airbnb-typescript/base"
   ],
   "parser": "@typescript-eslint/parser",
@@ -60,6 +52,8 @@ npm install eslint-config-airbnb-typescript \
     "mocha"
   ],
   "rules": {
+    "prefer-arrow-callback":"off",
+    "func-names":"off",
     "no-underscore-dangle": "off",
     "no-console": "off",
     "camelcase": "warn",
@@ -109,7 +103,7 @@ npm install eslint-config-airbnb-typescript \
     "max-lines-per-function": [
       "error",
       {
-        "max": 20,
+        "max": 30,
         "skipBlankLines": true,
         "skipComments": true
       }
