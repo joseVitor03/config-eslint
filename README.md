@@ -5,7 +5,7 @@
 ```
 npm i eslint --save-dev
 ```
-
+## Parte opcional:
 ### Para iniciar as etapas de configuração, execute o comando a seguir:
 ```
 ./node_modules/.bin/eslint --init
@@ -22,7 +22,7 @@ npm i eslint --save-dev
 ##### Desmarque a opção Browser e selecione Node (use a barra de espaço do teclado para marcar/desmarcar), uma vez que queremos que o nosso projeto rode com o Node. Se estiver trabalhando em um projeto que utilize o Browser como referência, você pode já deixar essa opção selecionada.
 
 ##### Escolha o formato JSON, que será o formato do nosso arquivo de configuração.
-
+## Termina parte opcional
 ### https://www.npmjs.com/package/eslint-config-airbnb-typescript e instale a config recomendada
 
 ### Arquivo .eslintrc.json:
